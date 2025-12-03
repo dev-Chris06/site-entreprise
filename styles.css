@@ -1,0 +1,115 @@
+/* styles.css — 100% CSS, pas de JS */
+/* Palette et variables */
+:root{
+  --blue:#007bff;
+  --green:#28a745;
+  --bg:#0f1720;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --max-width:1200px;
+  --radius:12px;
+  --year:2025;
+}
+
+/* Reset et base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter, system-ui, Arial, sans-serif;
+  margin:0;
+  color:#12263a;
+  background: linear-gradient(180deg,#f8fafc 0%, #eef2f6 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+a{color:inherit}
+img{max-width:100%;display:block;height:auto;border-radius:8px}
+
+/* Navigation */
+.nav--wrap{position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));border-radius:0 0 12px 12px}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{height:36px}
+.nav-links{list-style:none;display:flex;gap:1rem;align-items:center;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:inherit;padding:0.45rem 0.75rem;border-radius:8px}
+.nav-links a:hover{background:rgba(0,123,255,0.06)}
+.nav-toggle{display:none} /* pas de JS, on cache le toggle */
+
+/* Buttons */
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:8px;text-decoration:none}
+.btn-primary{background:var(--blue);color:white}
+.btn-cta{background:linear-gradient(90deg,var(--blue),#0056d6);color:#fff;padding:0.9rem 1.25rem;border-radius:14px;font-weight:600}
+.btn-outline{border:2px solid rgba(0,0,0,0.06);padding:0.5rem 0.9rem}
+
+/* HERO (image de fond configurable) */
+.hero{
+  display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;
+  padding:4rem 2rem;border-radius:16px;margin:2rem;
+  background-size:cover;background-position:center;
+  position:relative;
+  color: #071029;
+  overflow:hidden;
+}
+/* overlay léger pour lisibilité */
+.hero::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0.6), rgba(255,255,255,0.4));pointer-events:none;border-radius:16px;
+}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-family:Poppins, sans-serif;font-size:2.2rem;margin:0 0 1rem}
+.hero .lead{color:var(--muted);max-width:56ch;margin-bottom:1.25rem}
+
+/* Services cards */
+.section-header{text-align:left;margin-bottom:1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:white;border-radius:12px;padding:1.25rem;box-shadow:0 8px 20px rgba(12,35,64,0.06);transition:transform .28s ease, box-shadow .28s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(12,35,64,0.12)}
+.card .card-media{height:140px;margin-bottom:0.85rem;overflow:hidden;border-radius:8px}
+
+/* Masonry pour projets */
+.projects .masonry{column-count:3;column-gap:1rem}
+.project{break-inside:avoid;margin-bottom:1rem;background:white;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(12,35,64,0.06);transition:transform .28s}
+.project-body{padding:1rem}
+
+/* CTA & footer */
+.cta-card{background:linear-gradient(90deg, rgba(0,123,255,0.08), rgba(40,167,69,0.04));padding:2rem;border-radius:12px;text-align:center}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:start}
+.site-footer{background:#0b1220;color:#fff;padding:2rem;margin-top:3rem}
+.site-footer a{color:inherit}
+.social{list-style:none;padding:0;margin:0}
+
+/* Forms */
+.contact-form{display:flex;flex-direction:column;gap:0.5rem;background:white;padding:1.25rem;border-radius:12px;box-shadow:0 8px 24px rgba(12,35,64,0.06)}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem}
+.contact-aside{background:linear-gradient(180deg,#fff,#f9fafb);padding:1rem;border-radius:12px}
+input,textarea{padding:0.6rem;border:1px solid #e6eef6;border-radius:8px;font-size:0.95rem}
+input:focus,textarea:focus{outline:3px solid rgba(0,123,255,0.12)}
+.checkbox{display:flex;align-items:center;gap:0.5rem}
+
+/* Small screens */
+@media (max-width:992px){
+  .hero{grid-template-columns:1fr}
+  .projects .masonry{column-count:2}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .nav{padding:0.8rem 1rem}
+  .nav-links{flex-direction:column;gap:0.25rem}
+  .projects .masonry{column-count:1}
+  .container{padding:1rem}
+}
+
+/* Animations CSS-only */
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero{background-size:200% 200%;animation:gradientShift 12s ease infinite}
+
+/* Entrée simple */
+.card, .project, .post, .cta-card{opacity:0;transform:translateY(10px);animation:enter .6s ease forwards}
+.card{animation-delay:.08s}
+.card:nth-child(2){animation-delay:.12s}
+.card:nth-child(3){animation-delay:.16s}
+.project{animation-delay:.12s}
+@keyframes enter{to{opacity:1;transform:none}}
+
+/* helper */
+.kv{color:var(--muted);font-size:0.95rem}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BÉNIN TECH LABS — L'innovation numérique au cœur de l'Afrique</title>
+  <meta name="description" content="BÉNIN TECH LABS — Cabinet de consulting IT et développement logiciel sur mesure. Solutions web, mobile et cloud pour l'Afrique de l'Ouest.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Spécifique à la page : image de fond hero (met ton fichier hero-bg.jpg dans assets/images/) */
+    .hero{
+      background-image: url('assets/images/hero-bg.jpg');
+    }
+  </style>
+</head>
+<body>
+  <header class="nav--wrap">
+    <nav class="nav container" role="navigation" aria-label="Navigation principale">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Logo BÉNIN TECH LABS" class="logo">
+      </a>
+      <ul class="nav-links" role="menubar" aria-label="Menu principal">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="careers.html">Carrières</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content container">
+        <h1 id="hero-title">Développons votre avenir numérique avec BÉNIN TECH LABS.</h1>
+        <p class="lead">Nous transformons vos idées en solutions numériques robustes et performantes, conçues pour l'Afrique de l'Ouest et le marché international. Expertise locale, standards mondiaux.</p>
+        <p>
+          <a href="contact.html" class="btn btn-cta">Démarrer un projet</a>
+          <a href="#services" class="btn btn-outline">Nos services</a>
+        </p>
+      </div>
+      <!-- visuel complémentaire à droite (facultatif) -->
+      
+    </section>
+
+    <section id="services" class="services container" aria-labelledby="services-title">
+      <header class="section-header">
+        <h2 id="services-title">Nos expertises</h2>
+        <p class="kv">Solutions mobiles, web et cloud conçues pour faire grandir votre activité.</p>
+      </header>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <div class="card-media"><img src="assets/images/service-web.jpg" alt="Service Développement Web"></div>
+          <h3>Développement Web Full-Stack</h3>
+          <p>Conception d'applications web évolutives : API robustes, front-ends modernes et architecture maintenable.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card-media"><img src="assets/images/service-mobile.jpg" alt="Service Applications Mobiles"></div>
+          <h3>Applications Mobiles</h3>
+          <p>Expériences utilisateurs fluides, optimisées pour iOS et Android, avec focus performance et accessibilité.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card-media"><img src="assets/images/service-cloud.jpg" alt="Service Cloud & DevOps"></div>
+          <h3>Consulting Cloud & DevOps</h3>
+          <p>Migration, automatisation et optimisation d'infrastructures sur AWS et Azure pour une scalabilité maîtrisée.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card-media"><img src="assets/images/service-security.jpg" alt="Service Audit Sécurité"></div>
+          <h3>Audit de Sécurité IT</h3>
+          <p>Tests d'intrusion, revue d'architecture et recommandations pratiques pour protéger vos actifs numériques.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects container" aria-labelledby="projects-title" style="margin-top:2rem">
+      <header class="section-header">
+        <h2 id="projects-title">Projets récents</h2>
+        <p class="kv">Quelques réalisations qui montrent notre savoir-faire technique et notre ancrage local.</p>
+      </header>
+
+      <div class="masonry" role="list">
+        <article class="project" role="listitem">
+          <img src="assets/images/project-eagri.jpg" alt="e-Agri Bénin — projet">
+          <div class="project-body">
+            <h3>e-Agri Bénin</h3>
+            <p>Plateforme de mise en relation agriculteurs / acheteurs favorisant la traçabilité et la logistique locale.</p>
+          </div>
+        </article>
+
+        <article class="project" role="listitem">
+          <img src="assets/images/project-fintech.jpg" alt="FinTech Pulse — projet">
+          <div class="project-body">
+            <h3>FinTech Pulse</h3>
+            <p>Application mobile de gestion budgétaire adaptée aux marchés africains, centrée sur simplicité et sécurité.</p>
+          </div>
+        </article>
+
+        <article class="project" role="listitem">
+          <img src="assets/images/project-hr.jpg" alt="Portail RH Cotonou — projet">
+          <div class="project-body">
+            <h3>Portail RH Cotonou</h3>
+            <p>Intranet sur mesure pour une PME, intégrant gestion des congés, paie et communication interne.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="center" style="margin-top:1rem"><a href="projects.html" class="btn btn-outline">Voir tous les projets</a></p>
+    </section>
+
+    <section class="cta container" style="margin-top:2rem">
+      <div class="cta-card">
+        <h2>Prêt à transformer votre idée en produit ?</h2>
+        <p class="kv">Rencontrons-nous — stratégie produit, estimation rapide et feuille de route technique.</p>
+        <a href="contact.html" class="btn btn-primary">Planifier une réunion</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.svg" alt="BÉNIN TECH LABS logo small" style="height:36px">
+        <p>© 2025 BÉNIN TECH LABS — Tous droits réservés.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Carré 123, Cotonou, Bénin</p>
+        <p><a href="mailto:contact@benintechlabs.bj">contact@benintechlabs.bj</a> · +229 65 00 00 00</p>
+      </div>
+      <div>
+        <h4>Réseaux</h4>
+        <ul class="social">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

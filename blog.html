@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog — BÉNIN TECH LABS</title>
+  <meta name="description" content="Actualités et articles techniques de BÉNIN TECH LABS.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Fond hero spécifique blog */
+    .projects-hero, .blog-hero{padding:3rem;border-radius:12px;color:#fff;background-size:cover;background-position:center}
+    .blog-hero{background-image:url('assets/images/blog-bg.jpg');background-blend-mode:multiply; background-color: rgba(0,0,0,0.35)}
+  </style>
+</head>
+<body>
+  <header class="nav--wrap">
+    <nav class="nav container" role="navigation">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="careers.html">Carrières</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="blog-hero">
+      <h1>Actualités & Articles</h1>
+      <p class="kv">Analyses produit, bonnes pratiques cloud et retours d'expérience locaux.</p>
+    </section>
+
+    <section class="posts" style="margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+      <article class="post card">
+        <img src="assets/images/project-eagri.jpg" alt="Article: migration cloud" style="width:100%;border-radius:8px;margin-bottom:0.75rem;object-fit:cover;height:180px">
+        <h3>Comment bien démarrer une migration cloud</h3>
+        <p>Guide pratique pour planifier votre migration sans interruption de service.</p>
+        <a href="#" class="read-more">Lire</a>
+      </article>
+
+      <article class="post card">
+        <img src="assets/images/service-security.jpg" alt="Article: sécurité pour startups" style="width:100%;border-radius:8px;margin-bottom:0.75rem;object-fit:cover;height:180px">
+        <h3>Bonnes pratiques de sécurité pour startups</h3>
+        <p>Checklist simple pour sécuriser vos premières applications.</p>
+        <a href="#" class="read-more">Lire</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.svg" alt="BÉNIN TECH LABS logo small" style="height:36px">
+        <p>© 2025 BÉNIN TECH LABS — Tous droits réservés.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Carré 123, Cotonou, Bénin</p>
+        <p><a href="mailto:contact@benintechlabs.bj">contact@benintechlabs.bj</a> · +229 65 00 00 00</p>
+      </div>
+      <div>
+        <h4>Réseaux</h4>
+        <ul class="social">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
